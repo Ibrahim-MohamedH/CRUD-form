@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container py-2">
+      <div class="card bg-dark text-light">
+        <div class="card-body">
+          <form method="post">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  value=""
+                  name="name"
+                  id="name"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  value=""
+                  name="email"
+                  id="email"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  value=""
+                  id="phone"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <select id="gender" name="gender" class="form-select">
+                  <option disabled selected>Choose...</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="department" class="form-label">Department</label>
+                <input
+                  type="text"
+                  name="department"
+                  id="department"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-12 text-center">
+                <!-- <button class="btn btn-warning" name="update">UPDATE</button>
+                <a href="index.php" class="btn btn-secondary">Cancel</a> -->
+                <button class="btn btn-primary" name="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container py-2">
+      <div class="card bg-dark text-light">
+        <div class="card-body">
+          <h2 class="text-center">filters</h2>
+          <form>
+            <div class="mb-3">
+              <label for="search" class="form-label">Search</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  value=""
+                  name="search"
+                  id="search"
+                />
+                <button class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+          <form>
+            <h5 class="text-danger"></h5>
+            <div class="row align-items-center">
+              <div class="col-md-8 mb-3">
+                <label for="orderBy">Order By</label>
+                <select name="orderBy" id="orderBy" class="form-select">
+                  <option disabled selected>Choose...</option>
+                  <option value="id">Id</option>
+                  <option value="name">Name</option>
+                  <option value="gender">Gender</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                  <option value="department">Department</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-3">
+                <button class="btn btn-info" name="asc">Ascending</button>
+                <button class="btn btn-info" name="desc">Descending</button>
+              </div>
+            </div>
+          </form>
+          <a href="./index.php" class="btn btn-secondary">Cancel</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-2">
+      <div class="card bg-dark">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>name</th>
+              <th>email</th>
+              <th>phone</th>
+              <th>gender</th>
+              <th>department</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data LOOP -->
+            <tr>
+              <td>1</td>
+              <td>Ibrahim</td>
+              <td>Ibrahim@gmail.com</td>
+              <td>01096199918</td>
+              <td>Male</td>
+              <td>Web development</td>
+              <td>
+                <a href="" class="btn btn-warning">EDIT</a>
+                <a href="" class="btn btn-danger">DELETE</a>
+              </td>
+            </tr>
+            <!-- end of loop -->
+            <tr>
+              <td>2</td>
+              <td>Ibrahim</td>
+              <td>Ibrahim@gmail.com</td>
+              <td>01096199918</td>
+              <td>Male</td>
+              <td>Web development</td>
+              <td>
+                <a href="" class="btn btn-warning">EDIT</a>
+                <a href="" class="btn btn-danger">DELETE</a>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Ibrahim</td>
+              <td>Ibrahim@gmail.com</td>
+              <td>01096199918</td>
+              <td>Male</td>
+              <td>Web development</td>
+              <td>
+                <a href="" class="btn btn-warning">EDIT</a>
+                <a href="" class="btn btn-danger">DELETE</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
